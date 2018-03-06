@@ -1,0 +1,146 @@
+{
+  "currentPage": "1",
+  "data": 
+  [  
+    {
+      "id": "0001",
+      "applyId": "0001",
+      "orgName": "常规稽核",
+      "submitStatus": false,
+      "remark":""
+    }
+  ],
+  "draw": "1",
+  "message": "success",
+  "recordsFiltered": "89",
+  "recordsTotal": "89",
+  "success": "true"
+}
+
+
+var data ={
+        "imgSrc":"./images/imgs/travel.png",
+        "planMess":"北京冬奥3日之旅",
+        "list":[
+        {
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "北京-首尔",
+            "flight": "CA3870",
+            "price": "123/张",
+            "traLine": [
+            {
+              "time": "13:50",
+              "address": "韩国仁川国际机场"
+            },
+            {
+              "time": "17:50",
+              "address": "北京首都国际机场"
+            }
+            ]
+          },
+          {
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        },{
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "2022北京冬奥冰湖比赛"
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        },{
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "故宫博物馆",
+            "price":"40/人",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "天安门广场",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "北海公园",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        },{
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "故宫博物馆",
+            "price":"40/人",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "天安门广场",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "北海公园",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        }
+        ]
+      };

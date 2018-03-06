@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Document</title>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/seleWay.css">
+  <link rel="stylesheet" href="css/icon/iconfont.css">
+</head>
+<body>
+  <div class="sele_content">
+    <div class="address">
+     <img src="images/imgs/2.png" alt="">
+     <div class="modal"></div>
+     <p class="img_font">Seoul &nbsp;—&nbsp; Beijing</p>
+   </div>   
+   <div class="sele_time">
+    <p>Time</p>
+    <div class="sele_time_content">
+      <ul class="sele_day" id="travel_day">
+        <li class="active"><i class="iconfont icon-ok"></i>Three days</li>
+        <li class=""><i class="iconfont icon-icon-yuandian"></i>Five days</li>
+        <li class=""><i class="iconfont icon-icon-yuandian"></i>Seven days</li>
+      </ul>
+    </div>
+  </div>
+  <div class="empty"></div>
+  <div class="sele_hobby">
+    <p>Preference</p>
+    <div class="sele_hobby_content">
+      <ul id="hobby_one">
+        <li class=""><i class="iconfont icon-icon-yuandian"></i>Parenting</li>
+        <li class="active"><i class="iconfont icon-ok"></i>Romantic</li>
+        <li class=""><i class="iconfont icon-icon-yuandian"></i>Business</li>
+      </ul>
+      <ul id="hobby_two">
+        <li class=""><i class="iconfont icon-icon-yuandian"></i>Economics</li>
+        <li class=""><i class="iconfont icon-icon-yuandian"></i>Comfortable</li>
+        <li class="active"><i class="iconfont icon-ok"></i>Luxurious</li>
+      </ul>
+    </div>
+  </div>
+  <div class="next_step">
+    <div class="one_step">
+      <p id="next_step">Next</p>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $("#travel_day li").on("tap",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      $(this).siblings().children()
+                        .removeClass("icon-ok")
+                        .addClass("icon-icon-yuandian");
+      $(this).children("i")
+             .removeClass("icon-icon-yuandian")
+             .addClass("icon-ok");
+    })
+    $("#hobby_one li").on("tap",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      $(this).siblings().children()
+                        .removeClass("icon-ok")
+                        .addClass("icon-icon-yuandian");
+      $(this).children("i")
+             .removeClass("icon-icon-yuandian")
+             .addClass("icon-ok");
+    })
+    $("#hobby_two li").on("tap",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      $(this).siblings().children()
+                        .removeClass("icon-ok")
+                        .addClass("icon-icon-yuandian");
+      $(this).children("i")
+             .removeClass("icon-icon-yuandian")
+             .addClass("icon-ok");
+    })
+
+     // 点击下一步，请求数据
+     $("#next_step").on("tap",function(){
+      //点击更换颜色
+      $(this).css({backgroundColor:"#17346c"});
+      //跳转下一页
+      //获取当前页面选择的数据
+      var dayTime = $("#travel_day").find(".active").text();
+      var person = $("#hobby_one").find(".active").text();
+      var price = $("#hobby_two").find(".active").text();
+      var days;
+      if(dayTime == "Three days"){
+        days = 3;
+      }else if(dayTime=="Five days"){
+        days = 5;
+      }else if(dayTime == "Seven days"){
+        days = 7;
+      }
+      //跳转到下一页面，参数传值
+      window.location.href="./travelDetail.html?dayTime="+days+"&person="+person+"&price="+price;
+    })
+  })
+  
+</script>
+</html>

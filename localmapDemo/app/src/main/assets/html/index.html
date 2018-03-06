@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Document</title>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div id="content" class="travel_detail"></div>
+
+  <script id="test" type="text/html">
+    <!-- 奥运图片 -->
+    <div class="port_img">
+      <img src="{{imgSrc}}" alt="">
+      <div class="mask">{{planMess}}</div>
+    </div>
+    <!-- 路线详情 -->
+    <div class="travel_line">
+      <div class="line_frame">
+        <span class="little_circle"></span>
+        <div class="everday_line"></div>
+        {{each list as value index1}}
+        <h5 class="day_day"><span class="circle"><i class="point"></i></span><span class="dayNum">Day  {{index1+1}}</span></h5>
+        <ul class="clearfix day_item hident_ul" id="dayItem">
+          {{each value.add as value idx0}}
+          <li class="clearfix travel_item {{if index1==1}}pb5{{/if}}">
+            <span class="travel_ico mr16 fl"><img src="{{value.icon_src}}"></span>
+            <span class="travel_add flex_item" style="position: relative;">{{value.address}}<br>
+              {{if value.playTime}}
+                   <!-- {{if idx0 != 0}}
+                   <div class="bj_park"></div>
+                   {{/if}} -->
+                   <i style="font-size: 0.125rem;">{{value.playTime}}</i>
+                   {{/if}}
+                 </span>
+                 {{if value.flight}}
+                 <span class="travel_flight flex_item">{{value.flight}}</span>
+                 {{/if}}
+                 {{if value.price}}
+                 <span class="travel_price fr">￥ {{value.price}}</span>
+                 {{/if}}
+               </li>
+               {{if value.traLine}}
+               <div class="line_way">
+                <ul class="clearfix line_way_station">
+                  {{each value.traLine as value idx}}
+                  
+                  <div class="li_height">
+                    <li class="fl clearfix">{{value.time}}</li>
+                    <li class="fl clearfix">{{value.address}}</li>
+                  </div>
+                  <!-- <div class="align_line"></div> -->
+                  {{/each}}
+                </ul>
+              </div>
+              {{/if}}
+              {{if value.environment}}
+              <ul class="hotel_env clearfix">
+                {{each value.environment as value idx}}
+                 <!-- {{if index1 != 0}}
+                 <div class="offer_env"></div>
+                 {{/if}} -->
+                 <li class="fl">{{value}}</li>
+                 {{/each}}
+               </ul>
+               {{/if}}
+               {{/each}}
+             </ul>
+             {{/each}}
+           </div>
+         </div>
+         <!-- 费用合计 -->
+         <div class="footer">
+          <div class="fee_total">
+            <div class="fee">
+              <p>费用合计：￥8739/人</p>
+              <p>demo展示不会产生任何费用</p>
+            </div>
+            <div class="travelClip">
+              <a href="javascript:;">添加至行程夹</a>
+            </div>     
+          </div>
+        </div>
+      </script>
+    </body>
+    <script type="text/javascript" src="js/template-web.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script>
+      $(function(){
+       var data ={
+        "imgSrc":"./images/imgs/travel.png",
+        "planMess":"北京冬奥3日之旅",
+        "list":[
+        {
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "北京-首尔",
+            "flight": "CA3870",
+            "price": "123/张",
+            "traLine": [
+            {
+              "time": "13:50",
+              "address": "韩国仁川国际机场"
+            },
+            {
+              "time": "17:50",
+              "address": "北京首都国际机场"
+            }
+            ]
+          },
+          {
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        },{
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "2022北京冬奥冰湖比赛"
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        },{
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "故宫博物馆",
+            "price":"40/人",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "天安门广场",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "北海公园",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        },{
+          "add": [
+          {
+            "icon_src": "images/imgs/fly.png",
+            "address": "故宫博物馆",
+            "price":"40/人",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "天安门广场",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/fly.png",
+            "address": "北海公园",
+            "price":"免费",
+            "playTime":"游玩60分钟"
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          },{
+            "icon_src": "images/imgs/home.png",
+            "address": "王府井世纪大酒店",
+            "price": "345/间夜",
+            "environment": [
+            "大床房 / ",
+            "含早餐 / ",
+            "免费无线宽带"
+            ]
+          }
+          ]
+        }
+        ]
+      };
+
+     //  调用模板引擎提供的方法
+     /*   参数1：模板的id
+     参数2：对象（注意是  对象）*/
+     var html = template('test',data);
+     //找到并替换
+     document.getElementById('content').innerHTML = html;
+
+
+     $(".dayNum").on("tap",function(){
+      // debugger;
+       // alert($(this).parent(".day_day").next());
+       // $(this).parent(".day_day").next().removeClass(".hident_ul").siblings("ul").addClass(".hident_ul")
+       var hasClass = $(this).parent(".day_day").next().hasClass("hident_ul");
+       // debugger;
+       var classArr = $(this).parent(".day_day").siblings("ul");
+       for(var i = 0; i < classArr.length; i++){
+        if(!$(classArr[i]).hasClass("hident_ul")){
+          $(classArr[i]).addClass("hident_ul");
+        }
+      }
+       // $(this).parent(".day_day").next().toggleClass("hident_ul");
+       $(this).parent(".day_day").next().removeClass("hident_ul");
+     })
+   })
+
+ </script>
+ </html>

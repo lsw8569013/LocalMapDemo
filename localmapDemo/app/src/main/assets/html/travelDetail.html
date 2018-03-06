@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Document</title>
+  <!-- <script type="text/javascript" src="js/rem.js"></script> -->
+  <script type="text/javascript" src="js/Lrem.js"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/travelDetail.css">
+</head>
+<body>
+  <div id="content" class="travel_detail"></div>
+
+  <script id="test" type="text/html">
+    <!-- 奥运图片 -->
+    <div class="port_img">
+      <img src="{{model.likeProjectImageSrc}}" alt="">
+      <!-- 文字遮盖层 -->
+      <div class="mask">北京冬奥{{model.dayLength}}日之旅</div>
+    </div>
+    <!-- 路线详情 -->
+    <div class="travel_line">
+      <div class="line_frame">
+        <span class="little_circle"></span>
+        <div class="everday_line"></div>
+        {{each model.days as value index1}}
+        <h5 class="day_day">
+          <span class="circle"><img id="circle" {{if index1 != 1}}src="images/imgs/icon1.png"{{else}}src="images/imgs/icon2.png"{{/if}} alt=""></span>
+          <span class="dayNum">Day  {{index1}}</span>
+        </h5>
+        
+        <ul class="clearfix day_item {{if index1 != 1}}hident_ul{{/if}}" days="{{index1}}">
+          {{if index1 == 1 && value.ticket}}
+          <!-- 始发站机票 -->
+            <div class="startTicket">
+              <span class="travel_ico fl">
+               <img class="small_fly2" src="images/imgs/small_fly2.png" alt="">
+             </span>
+              <div class="startTicketItem1 pl12">
+                   <li class="clearfix line_way_station ">
+                       <span class="travel_flight flex_item">{{value.ticket.recommend.title}}
+                       </span>
+                       <span class="travel_flight flex_item"> {{value.ticket.recommend.code}}
+                       </span>
+                       <span class="travel_price fr">
+                        $<i>{{value.ticket.recommend.price}}</i>/张
+                       </span>
+                   </li>
+                   <li class="clearfix line_way_station pb4">
+                        <div class="li_height clearfix">
+                          <span class="fl clearfix lightOrange">{{value.ticket.recommend.description["start"].time}}</span>
+                          <span class="fl clearfix">{{value.ticket.recommend.description["start"].airport}}</span>
+                        </div>
+                        <div class="li_height clearfix">
+                          <span class="fl clearfix lightOrange">{{value.ticket.recommend.description["end"].time}}</span>
+                          <span class="fl clearfix">{{value.ticket.recommend.description["end"].airport}}</span>
+                        </div>
+                   </li>
+              </div>
+                <!-- 航班替换 -->
+                {{if value.ticket.replace }}
+                 <div class="repalce_hotel" style="position: relative;">
+                   <a href="javascript:;" class="reHotel">替换</a>
+                   <div class="triangle_top toggle_hid"></div>
+                   <div class="all_hotel">
+
+                     {{each value.ticket.replace as val1}}
+                     <div class="startTicketItem2 info_item pl40" data="{{val1}}" days="{{index1}}">
+                       <li class="clearfix line_way_station">
+                          <!--  <span class="travel_ico mr16 fl">
+                             <img class="small_fly2" src="images/imgs/small_fly2.png" alt="">
+                           </span> -->
+                           <span class="travel_flight flex_item">{{val1.title}}
+                           </span>
+                           <span class="travel_flight flex_item"> {{val1.code}}
+                           </span>
+                           <span class="travel_price fr">
+                            $<i>{{val1.price}}</i>/张
+                           </span>
+                       </li>
+                       <li class="clearfix line_way_station pb4">
+                            <div class="li_height clearfix">
+                              <span class="fl clearfix lightOrange">{{val1.description["start"].time}}</span>
+                              <span class="fl clearfix">{{val1.description["start"].airport}}</span>
+                            </div>
+                            <div class="li_height clearfix">
+                              <span class="fl clearfix lightOrange">{{val1.description["end"].time}}</span>
+                              <span class="fl clearfix">{{val1.description["end"].airport}}</span>
+                            </div>
+                       </li>
+                     </div>
+                    {{/each}}
+                   </div>
+                 </div>
+                {{/if}}
+            </div>
+           {{/if}}
+
+          <!-- 景点遍历 -->
+          {{if value.play}}
+            {{each value.play as value}}
+            <li class="clearfix travel_item">
+              <span class="travel_ico mr16 fl">
+                <img class="small_house" src="images/imgs/small_house.png" alt=""></span>
+              <span class="travel_add flex_item">{{value.title}}<br/>
+                <i style="font-size: 0.125rem;">游玩{{value.time}}分钟</i>
+              </span>
+              <span class="travel_price fr">{{if value.price == 0}}免费{{else}}$<i class="addPrice">{{value.price}}</i>/人{{/if}}</span>
+            </li>
+            {{/each}}
+          {{/if}}
+
+          <!-- 赛事渲染 -->
+          {{if value.project}}
+          <li class="clearfix travel_ite
+          m">
+            <span class="travel_ico mr16 fl">
+               <img class="small_flag" src="images/imgs/small_flag.png" alt="">
+            </span>
+            <span>{{value.project}}</span>
+          </li>
+          {{/if}}
+
+          <!-- 酒店遍历 -->
+          {{if value.hotel}}
+          <li class="travel_item">
+            <span class="travel_ico mr16 fl">
+             <img class="small_men" src="images/imgs/small_men.png" alt="">
+            </span>
+             <div class="clearfix hotelInfo">
+                    <span class="travel_add flex_item">{{value.hotel.recommend.title}}
+                    </span>
+                    <span class="travel_price fr">
+                    $<i>{{value.hotel.recommend.price}}</i>/间夜
+                    </span>
+                    <p class="pb4" style="font-size: 0.125rem">{{value.hotel.recommend.description}}</p>
+             </div>
+              <!-- 酒店替换 -->
+              {{if value.hotel}}
+               <div class="repalce_hotel" style="position: relative;">
+                 <a href="javascript:;" class="reHotel">替换</a>
+                 <div class="triangle_top toggle_hid"></div>
+                 <div class="all_hotel">
+                   <ul class="lk_all_hotel">
+                    {{each value.hotel.replace as v}}
+                     <li class="info_item">
+                      <div class="clearfix hotelItem pl80" data="{{v}}" days="{{index1}}">
+                          <!-- <span class="travel_ico mr16 fl">
+                           <img class="small_men" src="images/imgs/small_men.png" alt="">
+                          </span> -->
+                          <span class="travel_add flex_item">{{v.title}}
+                          </span>
+                          <span class="travel_price fr">
+                          $ <i>{{v.price}}</i> / 间夜
+                          </span>
+                          <p class="pb4" style="font-size: 0.125rem">{{v.description}}</p>
+                      </div>
+                    </li>
+                    {{/each}}
+                  </ul>
+                 </div>
+               </div>
+              {{/if}}
+          </li>
+          {{/if}}
+
+          {{if index1 == model.dayLength && value.ticket}}
+          <!-- 返航机票 -->
+            <div class="endTicket pt20">
+              <span class="travel_ico fl">
+                <img class="small_fly2" src="images/imgs/small_fly2.png" alt="">
+              </span>
+              <div class="endTicketItem1 pl12">
+                   <li class="clearfix line_way_station">
+                       <span class="travel_flight flex_item">{{value.ticket.recommend.title}}
+                       </span>
+                       <span class="travel_flight flex_item"> {{value.ticket.recommend.code}}
+                       </span>
+                       <span class="travel_price fr">
+                        $<i>{{value.ticket.recommend.price}}</i>/张
+                       </span>
+                   </li>
+                   <li class="clearfix line_way_station pb4">
+                        <div class="li_height clearfix">
+                          <span class="fl lightOrange">{{value.ticket.recommend.description["start"].time}}</span>
+                          <span class="fl">{{value.ticket.recommend.description["start"].airport}}</span>
+                        </div>
+                        <div class="li_height clearfix">
+                          <span class="fl clearfix lightOrange">{{value.ticket.recommend.description["end"].time}}</span>
+                          <span class="fl clearfix">{{value.ticket.recommend.description["end"].airport}}</span>
+                        </div>
+                   </li>
+              </div>
+               
+               <!-- 航班替换 -->
+                {{if value.ticket.replace }}
+                 <div class="repalce_hotel" style="position: relative;">
+                   <a href="javascript:;" class="reHotel">替换</a>
+                   <div class="triangle_top toggle_hid"></div>
+                   <div class="all_hotel">
+                     {{each value.ticket.replace as val1}}
+                     <div class="endTicketItem2 pl40  info_item" data="{{val1}}" days="{{index1}}">
+                       <li class="clearfix line_way_station">
+                           <!-- <span class="travel_ico mr16 fl">
+                             <img class="small_fly2" src="images/imgs/small_fly2.png" alt="">
+                           </span> -->
+                           <span class="travel_flight flex_item">{{val1.title}}
+                           </span>
+                           <span class="travel_flight flex_item"> {{val1.code}}
+                           </span>
+                           <span class="travel_price fr">
+                            $<i>{{val1.price}}</i>/张
+                           </span>
+                       </li>
+                       <li class="clearfix line_way_station pb4">
+                            <div class="li_height clearfix">
+                              <span class="fl clearfix lightOrange">{{val1.description["start"].time}}</span>
+                              <span class="fl clearfix">{{val1.description["start"].airport}}</span>
+                            </div>
+                            <div class="li_height clearfix">
+                              <span class="fl clearfix lightOrange">{{val1.description["end"].time}}</span>
+                              <span class="fl clearfix">{{val1.description["end"].airport}}</span>
+                            </div>
+                       </li>
+                     </div>
+                    {{/each}}
+                   </div>
+                 </div>
+                {{/if}}
+            </div>          
+          {{/if}}
+        </ul>       
+       {{/each}} 
+      </div>
+    </div>
+
+    <!-- 费用合计 -->
+    <div class="footer">
+      <div class="fee_total">
+        <div class="fee">
+          <p>费用合计：$<span id="totalFee"></span>/人</p>
+          <p>demo展示不会产生任何费用</p>
+        </div>
+        <div class="travelClip">
+          <a href="javascript:;" id="addTravel">添加至行程夹</a>
+        </div>     
+      </div>
+    </div>
+
+  </script>
+</body>
+<script type="text/javascript" src="js/template-web.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/travelDetail.js"></script>
+<script>
+
+</script>
+ </html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_pop"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="400dp"-->
+        <!--android:background="@drawable/textview_border"-->
+        <!--android:layout_marginTop="@dimen/y25"-->
+        <!--android:clipChildren="false">-->
+
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/vp_popupWindow"-->
+            <!--android:layout_width="240dp"-->
+            <!--android:layout_height="300dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:background="@drawable/textview_border"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_vp_introduce"-->
+            <!--android:layout_width="240dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="50dp"-->
+            <!--android:background="#dddddd"-->
+            <!--android:text=""-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="18sp"/>-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

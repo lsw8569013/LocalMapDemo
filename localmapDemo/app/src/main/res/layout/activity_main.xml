@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:test="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar_layout"/>
+
+    <RelativeLayout
+
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.map.demo.mapview.MapView
+            android:id="@+id/mapView"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_centerHorizontal="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addLine"
+                android:text="加一条线"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addOtherLine"
+                android:text="加另一条线"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y28"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/normal_blue"
+            >
+
+            <RelativeLayout
+                android:id="@+id/iv_shop_bg"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/shop_icon"
+                    android:text="Shop"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bottom_tv_size"
+                    android:gravity="center_horizontal"
+                    />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                />
+
+            <RelativeLayout
+                android:id="@+id/iv_canting_bg"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_canting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/canting_icon"
+                    android:text="Restarunt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bottom_tv_size"
+                    android:gravity="center_horizontal"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/iv_zhanguang_bg"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_zhanguang_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/zg_icon"
+                    android:text="Venue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bottom_tv_size"
+                    android:gravity="center_horizontal"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                />
+
+            <RelativeLayout
+                android:id="@+id/iv_park_bg"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/park_icon"
+                    android:text="@string/parking"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bottom_tv_size"
+                    android:gravity="center_horizontal"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                />
+
+            <RelativeLayout
+                android:id="@+id/iv_bus_bg"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_bus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/bus_icon"
+                    android:text="Bus stop"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bottom_tv_size"
+                    android:gravity="center_horizontal"
+                    />
+
+            </RelativeLayout>
+
+            <!--<View-->
+                <!--android:layout_width="1dip"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--/>-->
+
+            <RelativeLayout
+                android:id="@+id/iv_cesuo_bg"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:visibility="gone"
+                >
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_cesuo_icon"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:background="@mipmap/wc_icon"-->
+                    <!--/>-->
+
+                <TextView
+                    android:id="@+id/tv_wc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@mipmap/wc_icon"
+                    android:text="Washroom"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bottom_tv_size"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y111"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:id="@+id/iv_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/snow"
+                android:visibility="visible"
+                />
+            <TextView
+                android:id="@+id/tv_recommed_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="展馆"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/y12"
+                android:layout_marginLeft="@dimen/y22"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

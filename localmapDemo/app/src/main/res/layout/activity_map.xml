@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:test="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary">
+
+
+    <ImageView
+        android:id="@+id/iv_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/olympic_bg" />
+
+
+
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/iv_cesuo_bg"
+                android:layout_width="@dimen/x38"
+                android:layout_height="@dimen/x38"
+                android:background="@drawable/ic_oval_bg_white"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv_cesuo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/iv_canting_bg"
+                android:layout_width="@dimen/x38"
+                android:layout_height="@dimen/x38"
+                android:background="@drawable/ic_oval_bg_white"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv_canting_icon"
+                android:layout_width="@dimen/x40"
+                android:layout_height="wrap_content"
+
+                android:src="@mipmap/caiting_no_bg"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/iv_zhanguang_bg"
+                android:layout_width="@dimen/x38"
+                android:layout_height="@dimen/x38"
+                android:background="@drawable/ic_oval_bg_white"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv_zhanguang_icon"
+                android:layout_width="@dimen/x40"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/zhanguan_icon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/iv_bianlidian_bg"
+                android:layout_width="@dimen/x38"
+                android:layout_height="@dimen/x38"
+                android:background="@drawable/ic_oval_bg_white"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv_bianlidian_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/bianlidian"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/iv_bus_bg"
+                android:layout_width="@dimen/x38"
+                android:layout_height="@dimen/x38"
+                android:background="@drawable/ic_oval_bg_white"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv_bus_icon"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/bus_icon"
+                />
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_myLocation"
+        android:layout_width="@dimen/x25"
+        android:layout_height="@dimen/x25"
+        android:background="@mipmap/my_location_icon"
+        android:layout_marginTop="@dimen/y300"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_fish"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x25"
+            android:background="@mipmap/fish_icon"
+            android:layout_marginTop="@dimen/y250"
+            android:layout_marginLeft="@dimen/x50"
+            test:visibility="visible"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/iv_clothes"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x25"
+            android:background="@mipmap/qiu_icon"
+            android:layout_marginTop="@dimen/y150"
+            android:layout_marginLeft="@dimen/x250"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y175"
+        android:layout_margin="@dimen/x15"
+        android:background="@mipmap/hot_rock"
+        android:visibility="gone"
+        >
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

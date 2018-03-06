@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y25"
+    android:id="@+id/toolbar" >
+
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_toolbar_back"
+            android:layout_width="@dimen/x9"
+            android:layout_height="@dimen/y6"
+            android:src="@mipmap/icon_back" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/title_base"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/leftToolBarColor"
+        android:layout_gravity="center" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_esc"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_esc"
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/y8"
+            android:src="@mipmap/icon_esc" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>

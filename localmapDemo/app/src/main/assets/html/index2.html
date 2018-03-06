@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+   {{each}}
+  <ul class="clearfix day_item hident_ul" id="dayItem">
+          <!-- {{each value.hotel.recommend as value idx0}} -->
+          <li class="clearfix travel_item {{if index1==1}}pb5{{/if}}">
+            <span class="travel_ico mr16 fl"><img src="{{value.icon_src}}"></span>
+            <span class="travel_add flex_item" style="position: relative;">{{value.address}}<br>
+              {{if value.playTime}}
+                   <!-- {{if idx0 != 0}}
+                   <div class="bj_park"></div>
+                   {{/if}} -->
+                   <i style="font-size: 0.125rem;">{{value.playTime}}</i>
+                   {{/if}}
+                 </span>
+                 {{if value.flight}}
+                 <span class="travel_flight flex_item">{{value.flight}}</span>
+                 {{/if}}
+                 {{if value.price}}
+                 <span class="travel_price fr">￥ {{value.price}}</span>
+                 {{/if}}
+               </li>
+               {{if value.traLine}}
+               <div class="line_way">
+                <ul class="clearfix line_way_station">
+                  {{each value.traLine as value idx}}
+                  
+                  <div class="li_height">
+                    <li class="fl clearfix">{{value.time}}</li>
+                    <li class="fl clearfix">{{value.address}}</li>
+                  </div>
+                  <!-- <div class="align_line"></div> -->
+                  {{/each}}
+                </ul>
+              </div>
+              {{/if}}
+              {{if value.environment}}
+              <ul class="hotel_env clearfix">
+                {{each value.environment as value idx}}
+                 <!-- {{if index1 != 0}}
+                 <div class="offer_env"></div>
+                 {{/if}} -->
+                 <li class="fl">{{value}}</li>
+                 {{/each}}
+               </ul>
+               {{/if}}
+               <!-- {{/each}} -->
+             </ul>
+             {{/each}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <!-- 显示所有酒店 -->
+           <div class="repalce_hotel" style="position: relative;">
+             <a href="javascript:;" id="reHotel">替换</a>
+             <div class="triangle_top toggle_hid"></div>
+             <div class="all_hotel toggle_hid">
+               <ul class="lk_all_hotel">
+                 <li>
+                  <p>王府井世纪大酒店<span class="fr">￥345/间夜</span></p>
+                  <ul class="clearfix" style="font-size: 12px">
+                    <li class="fl">大床房 / </li>
+                    <li class="fl">含早餐 / </li>
+                    <li class="fl">免费无线宽带</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>王府井世纪大酒店<span class="fr">￥345/间夜</span></p>
+                  <ul class="clearfix" style="font-size: 12px">
+                    <li class="fl">大床房 / </li>
+                    <li class="fl">含早餐 / </li>
+                    <li class="fl">免费无线宽带</li>
+                  </ul>
+                </li>
+              </ul>
+             </div>
+           </div>
+</body>
+</html>

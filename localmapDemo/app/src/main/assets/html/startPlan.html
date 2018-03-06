@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Document</title>
+  <script type="text/javascript" src="js/rem.js"></script>
+  <link rel="stylesheet" href="./css/base.css">
+  <link type="text/css" rel=stylesheet href="./css/startPlan.css">
+  <style type="text/css">
+  </style>
+</head>
+<body>
+
+  <div class="begin_plan">
+    <div class="plan_heard">
+      <!-- 显示开始规划页面景点图 -->
+      <div class="scenery scenery1"><img src="images/imgs/jingdian1.png" alt=""></div>
+      <div class="scenery scenery2"><img src="images/imgs/fly2.png" alt=""></div>
+      <div class="scenery scenery3"><img src="images/imgs/jingdian2.png" alt=""></div>
+      <div class="scenery scenery4"><img src="images/imgs/flag.png" alt=""></div>
+      <div class="scenery scenery5"><img src="images/imgs/men.png" alt=""></div>
+      <div class="scenery scenery6"><img src="images/imgs/jingdian3.png" alt=""></div>
+      <div class="scenery scenery7"><img src="images/imgs/jingdian4.png" alt=""></div>
+      <div class="scenery scenery8"><img src="images/imgs/house.png" alt=""></div>
+      <div class="p_content">
+        <div class="p_logo">
+          <img src="./images/imgs/feizhu.png" alt="">
+        </div>
+        <div class="p_des">
+         <p>您的奥运之旅行程尚未规划</p>
+         <p>飞猪智能规划行程</p>
+         <!-- <p>飞猪智能规划行程</p> -->
+       </div>
+       <a href="javascript:;" id="startPlan">开始规划</a>
+     </div>
+    </div>
+ </div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    //获取用户id
+    $(function(){
+      $("#startPlan").on("click",function(){
+        window.location.href = "./seleWay.html";
+      })
+      //动画
+      sce1();
+      sce2();
+      sce3();
+      sce4();
+      function sce1(){
+          $(".scenery1").animate({
+          left: '2.8rem',   
+          }, 2000, 'ease-out',function(){
+            $(".scenery1").animate({left:'1.8rem'},2000, 'ease-out');
+              setTimeout(sce1,1000);
+          })
+      }
+
+      function sce2(){
+          $(".scenery3").animate({
+          right: '2.85rem',   
+          }, 2000, 'ease-out',function(){
+            $(".scenery3").animate({right:'1.85rem'},2000, 'ease-out');
+              setTimeout(sce2,1000);
+          })
+      }
+
+      function sce3(){
+          $(".scenery6").animate({
+          left: '2rem',   
+          }, 2000, 'ease-out',function(){
+            $(".scenery6").animate({left:'3rem'},2000, 'ease-out');
+              setTimeout(sce3,1000);
+          })
+      }
+
+      function sce4(){
+          $(".scenery7").animate({
+          right: '2rem',   
+          }, 2000, 'ease-out',function(){
+            $(".scenery7").animate({right:'3rem'},2000, 'ease-out');
+              setTimeout(sce4,1000);
+          })
+      }
+      
+    })
+</script>
+</html>

@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.map.demo"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.github.xxl6097:okhttputils:2.4.1'
+    compile 'com.alibaba:fastjson:1.2.20'
+    compile files('libs/gson-2.2.1.jar')
+//    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:26+'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+//    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+//    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+//    //内存泄漏检测
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+
+    //implementation files('libs/org.apache.httpclient.jar')
+    //implementation files('libs/apache-httpcomponents-httpcore.jar')
+    //implementation files('libs/commons-codec-1.11.jar')
+    //implementation files('libs/AliFaceDetectionJni.jar')
+}

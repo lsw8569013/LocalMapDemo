@@ -1,0 +1,183 @@
+@charset "utf-8";
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+  }
+  .t_middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sele_content{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 0.025rem solid #ccc;
+    background-color: #f7f7f7;
+  }
+  /*路线*/
+  .sele_content .address{
+    height: 6.35rem;
+    position: relative;
+    color: #fff;
+  }
+  .sele_content .address img{
+    width: 100%;
+    height: 100%;
+  }
+  .sele_content .address .modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(83,90,93,0.5);
+    top: 0;
+  }
+  .sele_content .img_font{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:0.9rem;
+  }
+  /*选择时间*/
+  .sele_content .sele_time{
+    /*height: 15%;
+    text-align: center;*/
+    position: relative;
+    padding: 1.35rem 1.1rem 0 1.1rem;
+    padding-top: 1.0rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .sele_content .sele_time p{
+    border-bottom: 0.025rem solid #ccc;
+    font-size:0.9rem;
+    color:#838282;
+    text-align:center;
+  }
+  .sele_content .sele_time .sele_time_content{
+    /*width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);*/
+    margin-top:0.9rem;
+  }
+  .sele_content .sele_time .sele_time_content ul{
+    font-size:0;
+  }
+  .sele_content .sele_time .sele_day li{
+    font-size:0.6rem;
+    display: inline-block;
+    width: 32.2%;
+    margin-right: 0.25rem;
+    background: #ccc;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #fff;
+    padding-left: 0.4rem;
+    box-sizing:border-box;
+  }
+  .sele_content .sele_time .sele_day li.active i{
+    display:inline-block;
+    margin-right: 0.25rem;
+    font-weight:900;
+  }
+  .sele_content .sele_time .sele_day li i{
+    display:inline-block;
+    margin-right:0.25rem;
+    font-weight:900;
+  }
+  .sele_content .sele_time .sele_day li:last-child{
+    margin-right: 0.0rem;
+  }
+  /*空隙*/
+  .sele_content .empty{
+    height: 3%;
+  }
+  /*偏好*/
+  .sele_content .sele_hobby{
+    background-color: #f7f7f7;
+    position: relative;
+    // height: 20%;
+    /*text-align: center;*/
+    padding: 0 1.1rem 0 1.1rem;
+  }
+  .sele_content .sele_hobby p{
+    border-bottom:0.025rem solid #ccc;
+    color:#838282;
+    font-size:0.9rem;
+    text-align:center;
+  }
+  /*.sele_content .sele_hobby .sele_hobby_content{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+   }*/
+  .sele_content .sele_hobby .sele_hobby_content #hobby_one li{
+    margin-right: 0.25rem;
+    margin-top: 0.9rem;
+  }
+  .sele_content .sele_hobby .sele_hobby_content #hobby_one li:last-child{
+    margin-right: 0.0rem;
+  }
+  .sele_content .sele_hobby .sele_hobby_content #hobby_two li{
+    margin-right: 0.25rem;
+  }
+  .sele_content .sele_hobby .sele_hobby_content #hobby_two li:last-child{
+    margin-right: 0.0rem;
+  }
+  .sele_content .sele_hobby ul{
+    font-size: 0;
+  }
+  .sele_content .sele_hobby ul li{
+    font-size:0.6rem;
+    display: inline-block;
+    width: 32.2%;
+    background-color: #ccc;
+    margin-bottom:0.25rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #fff;
+    padding-left: 0.2rem;
+    box-sizing: border-box;
+  }
+  .sele_content .sele_hobby ul li.active i{
+    display:inline-block;
+    margin-right: 0.25rem;
+    font-weight:900;
+  }
+  .sele_content .sele_hobby ul li i{
+    display:inline-block;
+    // margin-right: 0.25rem;
+    font-weight:900;
+  }
+  /*下一步*/
+  .sele_content .next_step{
+    // height: 42%;
+    width: 100%;
+    text-align: center;
+    display: table;
+    margin-top:5.75rem;
+  }
+  .sele_content .next_step .one_step{
+    display: table-cell;
+    vertical-align: middle;
+    color:  #4169E1;
+  }
+  .sele_content .next_step .one_step p{
+    display: inline-block;
+    height: 1.75rem;
+    width: 7.0rem;
+    line-height: 1.75rem;
+    color: #fff;
+    background-color: #135ffe;
+    font-size:0.9rem;
+    font-weight:0;
+  }
+  .active{
+    background: #135ffe !important;
+  }

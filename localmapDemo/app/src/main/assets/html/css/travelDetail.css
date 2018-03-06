@@ -1,0 +1,312 @@
+@charset "utf-8";
+html,body{
+  height: 100%;
+  font-size:20px;
+  font-family: "微软雅黑";
+}
+.travel_detail{
+  /*overflow: auto;*/
+  position: relative;
+  height: auto;
+  min-height: 100%;
+}
+/*头部图片*/
+.port_img{
+  position: relative;
+}
+.port_img .mask{
+  background-color: rgba(130,121,121,0.5);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  line-height: 7.5rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.port_img img{
+  height: 7.5rem;
+  position: relative;
+}
+/*路线详情*/
+.travel_line{
+  padding: 0.25rem 1.0rem 3.7rem 1.0rem;
+  width:100%;
+  overflow:auto;
+  top:-0.075rem;
+  position:relative;
+  z-index:10;
+  bottom:2.0rem;
+  box-sizing: border-box;
+}
+.travel_line .day_day{
+  /*margin: 0.5rem 0 0.375rem 0;
+  padding-left: 0.1rem;*/ 
+  color: #fb6902;
+  position:relative;
+  padding: 0.5rem 0 0.375rem 0.1rem;
+}
+.travel_line .travel_ico img.small_house{
+  background-color: #f7f7f7;
+  display: inline-block;
+  height: 1.2rem;
+  width: 1.05rem;
+  margin-left:-0.2rem;
+}
+.travel_line .travel_ico img.small_men{
+  background-color: #f7f7f7;
+  display: inline-block;
+  height: 1.2rem;
+  width: 0.65rem;
+}
+.travel_line .travel_ico img.small_fly2{
+  display: inline-block;
+  height: 0.7rem;
+  width: 1.25rem;
+  margin-left:-0.4rem;
+}
+.travel_line .travel_ico img.small_flag{
+  display: inline-block;
+  height: 1.0rem;
+  width: 1.0rem;
+}
+.travel_line .day_item{
+  vertical-align: middle;
+  position: relative;
+}
+.travel_line .day_item .travel_item{
+  margin-top: 0.5rem;
+  /*display: flex;*/
+}
+.travel_line .offer_env{
+  position: absolute;
+  border-left: 0.025rem dashed #ccc;
+  height: 0.5rem;
+  top: -1.3rem;
+  left: -0.5rem;
+}
+.travel_line .day_item .line_way{
+  font-size:0.6rem;
+}
+
+.travel_line .day_item .line_way_station{
+  margin-left: 1.2rem;
+  /*position: relative;*/
+}
+.travel_line .day_item .line_way_station div li{
+  padding-right: 0.75rem;
+}
+/*.travel_line .day_item .line_way_station div:first-child{
+  margin-bottom: 0.375rem;
+}*/
+.travel_line .day_item .line_way .line_way_station li{
+  margin-right: 0.75rem;
+}
+.travel_line .day_item .line_way_station .li_height{
+  // height: 1.0rem;
+  font-size:0.35rem;
+  // margin-left: 0.2rem;
+}
+.travel_line .day_item .line_way .line_way_station .align_line{
+  position: absolute;
+  height: 0.75rem;
+  border-left: 0.025rem solid #ccc;
+  left: 1.1rem;
+  top: 0.125rem;
+}
+/*费用合计*/
+.footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+  background-color: #ccc;
+}
+.fee_total{
+ border-top: 0.025rem solid #ccc;
+ height: 1.0rem; 
+ padding: 1.0rem 0.5rem;
+ position: relative;
+ bottom: 0.0rem;
+}
+.fee_total .fee{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.fee_total .travelClip{
+  position:absolute;
+  right: 0;
+  top:50%;
+  transform:translateY(-50%);
+  margin-right: 0.5rem;
+}
+.fee_total .travelClip a{
+  /*line-height: 30px;*/
+  display: inline-block;
+  padding: 0.05rem;
+  width: 5.0rem;
+  background-color: #0093ff;
+  color: #fff;
+  text-align: center;
+}
+.bj_park{
+  position: absolute;
+  height: 0.5rem;
+  border-left: 0.025rem dashed #ccc;
+  top:-0.65rem;
+  left: -0.525rem;
+}
+.hotel_env{
+  margin-left: 1.1rem;
+  position: relative;
+  font-size:0.6rem;
+}
+.mr16{
+  margin-right: 0.6rem;
+}
+
+/*.flex_item{
+  flex: 1;
+}*/
+.pb5{
+  padding-bottom: 0.125rem;
+}
+.pb4{
+  padding-bottom:0.1rem;
+}
+.pt20{
+  padding-top:0.5rem;
+}
+.pl80{
+  padding-left: 2.0rem;
+}
+.pb5{
+  padding-bottom: 0.125rem;
+}
+.pl40{
+  padding-left:1.0rem;
+}
+.pl12{
+  padding-left: 0.3rem;
+}
+/*三角形*/
+.triangle_right{
+  position:absolute;width: 0;height: 0;overflow: hidden;border-width: 0.25rem;border-color: transparent transparent transparent #FF4500;border-style: dotted dotted dotted solid;left: 0.45rem;top: 0.25rem;visibility: hidden;
+}
+.triangle_top{
+  position:absolute;
+  width: 0;  
+  height: 0;  
+  overflow: hidden; 
+  border-width: 0.5rem;  
+  border-color: transparent transparent #e1e1e1 transparent;  
+  border-style: dotted dotted solid dotted;
+  top: 0.4rem;
+  left:1.5rem;
+}
+.active_orange{
+  border-color:#FF4500 !important;
+}
+.circle{
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-width:0.025rem;
+  /*border-style:solid;
+  border-color:#ccc;*/
+  /*border:0.025rem solid #ccc;*/
+  /*border-radius: 50%;*/
+  /*line-height: 18px;*/
+  margin-right: 0.15rem;
+  position: relative;
+  left:-0.15rem;
+  z-index: 2;
+  background-color: #f7f7f7;
+  top: 0.1rem;
+}
+/*.circle .point{
+  display: inline-block;*/
+  /*height: 0.05rem;
+  width: 0.05rem;*/
+/*  border-width:1px;
+  border-style:solid;
+  border-color:#ccc;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}*/
+/*线框容器*/
+.line_frame{
+  position: relative;
+  height: 100%;
+}
+.everday_line{
+  position: absolute;
+  height: 97%;
+  border-left: 0.06rem solid #ccc;
+  top: 0.86rem;
+  left: 0.28rem;
+}
+
+.orange{
+  color: orange;
+}
+.hident_ul{
+  display: none;
+}
+.travel_price{
+  color: #0093ff;
+  width: 4.6rem;
+}
+.little_circle{
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border:0.1rem solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  left: 0.1rem;
+  z-index: 222;
+  background-color: #f7f7f7;
+}
+
+/*酒店替换样式*/
+.travel_detail .travel_line .repalce_hotel{
+  /*padding-left:0.5rem;
+  color:red;*/
+  position:relative;
+}
+.repalce_hotel a{
+  color:#0093ff;
+  // margin-left:1.2rem;
+  position:relative;
+  z-index:999;
+  padding: 0.25rem 0.75rem 0.25rem 1.8rem;
+}
+.travel_detail .travel_line .repalce_hotel .all_hotel{
+  background-color:#e1e1e1;
+  position:relative;
+  margin:0 -1rem;
+  margin-top:0.6rem;
+  -webkit-transition: height 0.6s;
+  -moz-transition: height 0.6s;
+  -o-transition: height 0.6s;
+  transition: height 0.6s;
+  height: 0;
+  overflow:hidden;
+}
+.toggle_hid{
+  display: none;
+}
+.lightOrange{
+  color:#FB6904;
+}

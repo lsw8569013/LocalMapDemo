@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LocalMapDemo</string>
+
+    <string name="pointName">点名称</string>
+    <string name="pointTag">tag</string>
+    <!-- map string -->
+    <string name="map_title_right">Pocket</string>
+    <string name="map_title_left">Passport</string>
+    <string name="passport">Passport</string>
+    <string name="starmall">Star Mall</string>
+    <string name="sam_smith">Sam Smith</string>
+    <string name="parking">Parking</string>
+    <string name="title_base">Passport</string>
+    <string name="wisdom">Itinerary of wisdom</string>
+    <string name="star_mall">Star Mall</string>
+
+    <!-- 1111-->
+</resources>

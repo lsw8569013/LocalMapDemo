@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#33FF4081</color>
+    <color name="color_tab_bg">#2B2E33</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <!--toolbar左边textView颜色-->
+    <color name="leftToolBarColor">#6E6E6E</color>
+    <!--toolbar右边textView初始颜色-->
+    <color name="rightToolBarInitial">#17356B</color>
+    <!--toolbar右边textView改变后颜色-->
+    <color name="rightToolBarChanged">#FA8C01</color>
+    <!--白色-->
+    <color name="white">#FFFFFF</color>
+
+    <color name="wisdomTitle">#17346C</color>
+    <color name="nameColor">#393838</color>
+    <color name="normal_blue">#17346c</color>
+    <color name="bottom_icon_click">#fb6902</color>
+
+    <color name="colorPopupWindow">#629FFA</color>
+</resources>

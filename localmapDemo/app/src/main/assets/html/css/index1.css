@@ -1,0 +1,8 @@
+ @charset "utf-8";
+/*风景区域样式*/
+ div{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+ }

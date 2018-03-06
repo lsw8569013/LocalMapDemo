@@ -1,0 +1,310 @@
+{
+  "code": 200,
+  "model": {
+    "1": {
+      "hotel": {
+        "recommend": {
+          "code": "parenting",
+          "id": 39,
+          "price": "1033",
+          "title": "北京希尔顿酒店"
+        },
+        "replace": [
+          {
+            "code": "business",
+            "id": 40,
+            "price": "1600",
+            "title": "北京威斯汀大饭店"
+          },
+          {
+            "code": "romantic",
+            "id": 41,
+            "price": "1300",
+            "title": "JW万豪酒店"
+          }
+        ]
+      },
+      "play": [
+        {
+          "code": "1",
+          "id": 66,
+          "price": "44",
+          "time": "120-180",
+          "title": "颐和园"
+        },
+        {
+          "code": "1",
+          "id": 67,
+          "price": "0",
+          "time": "120",
+          "title": "北京大学"
+        },
+        {
+          "code": "1",
+          "id": 68,
+          "price": "0",
+          "time": "120",
+          "title": "清华大学"
+        }
+      ],
+      "ticket": {
+        "recommend": {
+          "code": "CA138",
+          "desc": {
+            "end": {
+              "airport": "首都机场T3",
+              "time": "10:30"
+            },
+            "start": {
+              "airport": "金浦机场I",
+              "time": "09:30"
+            }
+          },
+          "id": 83,
+          "price": "1841",
+          "title": "首尔-北京"
+        },
+        "replace": [
+          {
+            "code": "CA126",
+            "desc": {
+              "end": {
+                "airport": "首都机场T3",
+                "time": "19:20"
+              },
+              "start": {
+                "airport": "仁川机场",
+                "time": "18:10"
+              }
+            },
+            "id": 42,
+            "price": "1800",
+            "title": "中国国航"
+          },
+          {
+            "code": "KE853",
+            "desc": {
+              "end": {
+                "airport": "首都机场T2",
+                "time": "20:15"
+              },
+              "start": {
+                "airport": "仁川机场",
+                "time": "19:00"
+              }
+            },
+            "id": 43,
+            "price": "1700",
+            "title": "大韩航空"
+          },
+          {
+            "code": "CZ316",
+            "desc": {
+              "end": {
+                "airport": "首都机场T2",
+                "time": "00:25 +1天"
+              },
+              "start": {
+                "airport": "仁川机场",
+                "time": "23:20"
+              }
+            },
+            "id": 44,
+            "price": "1500",
+            "title": "中国南方航空"
+          }
+        ]
+      }
+    },
+    "2": {
+      "hotel": {
+        "$ref": "$.model.1.hotel"
+      },
+      "play": [
+        {
+          "code": "2",
+          "id": 69,
+          "price": "0",
+          "time": "60-120",
+          "title": "天安门"
+        },
+        {
+          "code": "2",
+          "id": 70,
+          "price": "40",
+          "time": "180-240",
+          "title": "故宫"
+        },
+        {
+          "code": "2",
+          "id": 71,
+          "price": "0",
+          "time": "120-180",
+          "title": "南锣鼓巷"
+        }
+      ]
+    },
+    "3": {
+      "hotel": {
+        "$ref": "$.model.1.hotel"
+      },
+      "play": [
+        {
+          "code": "3",
+          "id": 72,
+          "price": "0",
+          "time": "60",
+          "title": "天坛"
+        },
+        {
+          "code": "3",
+          "id": 73,
+          "price": "0",
+          "time": "60",
+          "title": "雍和宫"
+        },
+        {
+          "code": "3",
+          "id": 74,
+          "price": "0",
+          "time": "60",
+          "title": "国子监"
+        }
+      ]
+    },
+    "4": {
+      "hotel": {
+        "$ref": "$.model.1.hotel"
+      }
+    },
+    "5": {
+      "hotel": {
+        "$ref": "$.model.1.hotel"
+      },
+      "play": [
+        {
+          "code": "5",
+          "id": 75,
+          "price": "35",
+          "time": "180-240",
+          "title": "八达岭长城"
+        },
+        {
+          "code": "5",
+          "id": 76,
+          "price": "35",
+          "time": "120",
+          "title": "明十三陵"
+        }
+      ]
+    },
+    "6": {
+      "hotel": {
+        "$ref": "$.model.1.hotel"
+      },
+      "play": [
+        {
+          "code": "6",
+          "id": 77,
+          "price": "0",
+          "time": "60",
+          "title": "鸟巢"
+        },
+        {
+          "code": "6",
+          "id": 78,
+          "price": "40",
+          "time": "60",
+          "title": "水立方"
+        },
+        {
+          "code": "6",
+          "id": 79,
+          "price": "0",
+          "time": "120",
+          "title": "奥林匹克森林公园"
+        }
+      ]
+    },
+    "7": {
+      "play": [
+        {
+          "code": "7",
+          "id": 80,
+          "price": "0",
+          "time": "120",
+          "title": "798艺术区"
+        }
+      ],
+      "ticket": {
+        "recommend": {
+          "code": "CZ315",
+          "desc": {
+            "end": {
+              "airport": "仁川机场",
+              "time": "22:20"
+            },
+            "start": {
+              "airport": "首都机场T2",
+              "time": "19:15"
+            }
+          },
+          "id": 81,
+          "price": "1500",
+          "title": "北京-首尔"
+        },
+        "replace": [
+          {
+            "code": "CZ317",
+            "desc": {
+              "end": {
+                "airport": "金浦机场I",
+                "time": "11:30"
+              },
+              "start": {
+                "airport": "首都机场T2",
+                "time": "08:20"
+              }
+            },
+            "id": 45,
+            "price": "1600",
+            "title": "中国南方航空"
+          },
+          {
+            "code": "CA123",
+            "desc": {
+              "end": {
+                "airport": "仁川机场",
+                "time": "11:50"
+              },
+              "start": {
+                "airport": "首都机场T3",
+                "time": "08:45"
+              }
+            },
+            "id": 46,
+            "price": "2100",
+            "title": "中国国航"
+          },
+          {
+            "code": "OZ3365",
+            "desc": {
+              "end": {
+                "airport": "金浦机场I",
+                "time": "13:50"
+              },
+              "start": {
+                "airport": "首都机场T3",
+                "time": "10:55"
+              }
+            },
+            "id": 47,
+            "price": "1700",
+            "title": "韩亚航空"
+          }
+        ]
+      }
+    }
+  },
+  "success": true
+}

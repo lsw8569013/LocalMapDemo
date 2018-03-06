@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_wisdom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="450dp"-->
+        <!--android:layout_marginTop="@dimen/y25">-->
+
+
+        <!--<WebView-->
+            <!--android:id="@+id/wb_wisdom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/textview_border"/>-->
+
+        <!--&lt;!&ndash;<ProgressBar&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/pb_wisdom"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="5dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@drawable/progress_bar_webview"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:visibility="gone"/>&ndash;&gt;-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>
